@@ -1,0 +1,71 @@
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+@layer components {
+  .wrapper{
+    @apply w-[90%] mx-auto overflow-hidden max-w-screen-xl;
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.open-menu {
+  @apply bg-open-menu w-6 h-5 bg-cover bg-center cursor-pointer transition-all z-50 md:hidden;
+}
+
+.closed-menu {
+  @apply bg-close-menu w-6 h-5 bg-cover bg-center cursor-pointer transition-all z-50 md:hidden;
+}
+
+.hidden-nav {
+  @apply fixed inset-0 bg-gradient-to-b from-white/70 to-black/70 z-40 translate-x-full md:static md:translate-x-0 md:bg-none;
+}
+
+.display-nav {
+  @apply fixed inset-0 bg-gradient-to-b from-white/70 to-black/70 z-40  translate-x-0 transition-transform md:static md:translate-x-0 md:bg-none;
+}
+
+.button {
+  @apply bg-bright-red text-very-light-gray hover:bg-red-400 block w-max py-4 px-12 rounded-full hidden py-3;
+}
+
+.button-mobile {
+  @apply bg-bright-red text-very-light-gray hover:bg-red-400 inline-block w-max py-4 px-12 rounded-full mx-auto;
+}
+
+.button-buttom {
+  @apply text-bright-red bg-very-light-gray hover:bg-slate-100 inline-block w-max py-4 px-12 rounded-full mx-auto;
+}
+
+@layer { 
+    .footer-area {
+    grid-template-areas:
+    'form'
+    'navigation'
+    'social-media'
+    'logo'
+    'copyright';
+  }
+}
+
+@layer components {
+  .footer-area-md {
+    grid-template-areas: 
+    'logo navigation form'
+    'social-media navigation copyright';
+  }
+}
