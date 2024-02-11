@@ -24,7 +24,7 @@ function Landing() {
             <img
               src={Logo}
               alt="logo"
-              className="w-full select-none min-w-[170npmpx]"
+              className="w-full select-none min-w-[170px]"
             />
           </a>
 
